@@ -27,7 +27,7 @@ public class ResourceLeak {
             PrintWriter out = new PrintWriter("");
             out.println("the text");
 System.out.println("");
-System.out.println("");   
+System.out.println("");      
             out.close();
             Cipher c1 = Cipher.getInstance("DES");
         } catch (IOException | NoSuchAlgorithmException | NoSuchPaddingException e) {
@@ -44,7 +44,7 @@ System.err.println();
             PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter("out.txt", true)));
             out.println("the text");
         } catch (IOException e) {
-            logger.error("Resource is not closed anywhere.",e);
+          
         }
     }
 
