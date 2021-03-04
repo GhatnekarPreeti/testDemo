@@ -15,7 +15,7 @@ public class ResourceLeak {
 	private boolean active;
     public void setActive(boolean b)
           {
-            this.active = b;
+            this.active = b;  
           }
 
     LoggerFactory logger = new LoggerFactory();
@@ -28,6 +28,7 @@ public class ResourceLeak {
             out.println("the text");
 System.out.println("");
 System.out.println("");      
+System.out.println(""); 
             out.close();
             Cipher c1 = Cipher.getInstance("DES");
         } catch (IOException | NoSuchAlgorithmException | NoSuchPaddingException e) {
@@ -53,9 +54,7 @@ System.err.println();
 		String surName = surName;
 		name = name;
 		this.count = count;
-	        preeti += preeti;
-		preeti = preeti;
-		 r += r;
+	       
 	   }
 public void method() {
 		Thread myThread = new Thread();
