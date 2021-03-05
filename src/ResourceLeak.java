@@ -15,7 +15,7 @@ public class ResourceLeak {
 	private boolean active;
     public void setActive(boolean b)
           {
-            this.active = b;  
+            this.active = b;       
           }
 
     LoggerFactory logger = new LoggerFactory();

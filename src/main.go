@@ -11,7 +11,7 @@ package main
 func main(src string, dst string) ([]string, error) {
 	fmt.Printf("Unzip dataset %s\n", src)
 	var fileNames []string
-	// Open zip file
+	// Open zip file       
 	r, err := zip.OpenReader(src)
 	if err != nil {
 		return fileNames, err
