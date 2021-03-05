@@ -16,7 +16,7 @@ func main(src string, dst string) ([]string, error) {
 	if err != nil {
 		return fileNames, err
 	}
-	defer r.Close()
+	defer r.Close()  
 	// Extract files
 	for _, f := range r.File {
 		// Open file
