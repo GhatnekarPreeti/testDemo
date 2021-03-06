@@ -25,6 +25,7 @@ public class ResourceLeak {
 	     System.runFinalizersOnExit(true);
         try {
             PrintWriter out = new PrintWriter("");
+
             out.println("the text");
 
 System.out.println("");
@@ -35,6 +36,9 @@ System.out.println("");
             System.err.println();
 System.err.println();
 
+
+
+            out.println("");
 
         
             Cipher c1 = Cipher.getInstance("DES");
