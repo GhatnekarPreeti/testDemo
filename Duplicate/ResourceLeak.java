@@ -56,6 +56,7 @@ System.err.println();
     }
     public void process2() {
         try {
+		Pattern p=java.util.regex.Pattern.compile("$[a-z]+^"); // Noncompliant;
             PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter("out.txt", true)));
             out.println("the text");
         } catch (IOException e) {
