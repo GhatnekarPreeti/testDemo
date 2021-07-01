@@ -48,6 +48,7 @@ System.err.println();
 
         
             Cipher c1 = Cipher.getInstance("DES");
+		 Cipher c = new NullCipher();
         } catch (IOException | NoSuchAlgorithmException | NoSuchPaddingException e) {
            
 
