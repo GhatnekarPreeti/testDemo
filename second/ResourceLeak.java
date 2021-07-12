@@ -51,6 +51,32 @@ System.err.println();
         }
 
     }
+	public void catchNPE() {
+		try {
+
+			// EMB-ISSUE: CodeIssueNames.AVOID_CATCHING_NPE
+		} catch (NullPointerException e) {
+			// TODO: handle exception
+		}
+		try {
+
+			// EMB-ISSUE: CodeIssueNames.AVOID_CATCHING_NPE/no-detect
+		} catch (ArithmeticException e) {
+			// TODO: handle exception
+		}
+		try {
+
+			// EMB-ISSUE: CodeIssueNames.AVOID_CATCHING_NPE
+		} catch (ArithmeticException | NullPointerException e) {
+			// TODO: handle exception
+		}
+		try {
+
+			// EMB-ISSUE: CodeIssueNames.AVOID_CATCHING_NPE
+		} catch (NullPointerException | ArithmeticException e) {
+			// TODO: handle exception
+		}
+	}
     public void process2() {
         try {
             PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter("out.txt", true)));
@@ -69,6 +95,16 @@ System.err.println();
 		this.count = count;
 	       
 	   }
+	public void m() {
+	//EMB-ISSUE: CodeIssueNames.AVOID_NON_CASE_LABELS_IN_SWITCH_STATEMENT
+switch (month) {
+case JANUARY:
+case FEBRUARY:
+	MARCH:   
+ system.out.println("it is March");
+  break;
+}
+}
 public void method() {
 		Thread myThread = new Thread();
 		// EMB-ISSUE: CodeIssueNames.RUN_SHOULD_NOT_BE_CALLED_DIRECTLY
